@@ -1,0 +1,51 @@
+1. Given a number. Print “odd” if the number is odd and “even” if it’s even.
+
+function checkNumber(number){
+    if (number % 2 == 0)
+        return "even";
+    else
+        return "odd"
+}
+checkNumber()
+
+OR
+
+function checkNumber(number) {
+    var numberIs = (number % 2 == 0) ? 'even' : 'odd'
+    return numberIs
+}
+checkNumber()
+
+
+2. Given two numbers print 1 if one of them is divisible by the other one, otherwise print 0.
+
+function checkDivisibleNumber(a, b) {
+    if (a % b  == 0 || b % a == 0)
+        return 1
+    else
+        return 0
+}
+checkDivisibleNumber()
+
+
+3. Given two variables, which are the angles of a triangle. Find the third angle of the
+triangle. (Sum of the angles of a triangle equals 180 degrees).
+
+function findThirdAngle(a, b) {
+    let triangle = 180
+    let sum = a + b
+    let thirdAngle = triangle - sum
+        return thirdAngle;
+}
+findThirdAngle(10, 29)
+
+5. Given a positive integer. Bring the last digit of the number to the beginning. Print the new
+number. If the last digit of the inserted number is 0, number remains the same.
+
+function replaceDigit(num){
+  let str = num.toString();     
+  let lastDigit = str.substring(str.length - 1);  
+  let remove = lastDigit + str.substring(0, str.length - 1);
+    return remove;
+}
+replaceDigit(234)
