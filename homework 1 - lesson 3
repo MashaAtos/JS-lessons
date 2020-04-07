@@ -49,3 +49,73 @@ function replaceDigit(num){
     return remove;
 }
 replaceDigit(234)
+
+6. Given five numbers as input. Calculate and print the average of the numbers(without
+using arrays).
+
+function avg(a, b, c, d, e) {
+  return (a + b + c + d + e) / 5;
+}
+
+7. Check if a number is a multiple of 3, 5 or 7 and output the appropriate message.
+
+function getValue(x) 
+{
+  if (x % 3 == 0 && x % 5 == 0 && x % 7 == 0) {
+    return x + ' is a multiple of 3, 5 or 7.';
+      } 
+  else if (x % 3 == 0 && x % 5 == 0){
+    return x + ' is a multiple of 3 and 5.';
+    }
+ else if (x % 3 == 0 && x % 7 == 0){
+    return num + ' is a multiple of 3 and 7.'
+    } 
+else if (x % 3 == 0 && x % 7 == 0){
+    return x + ' is a multiple of 3 and 7.'
+    } 
+else if (x % 5 == 0 && x % 7 == 0){
+    return x + ' is a multiple of 5 and 7.'
+    } 
+else if (x % 3 == 0){
+    return x + ' is a multiple of 3.'
+    } 
+else if (x % 5 == 0){
+    return x + ' is a multiple of 5'
+    } 
+else if (x % 5 == 0){
+    return x + ' is a multiple of 7'
+    } 
+else {
+    return x + ' is not a multiple of 3, 5 or 7.';
+      }
+}
+
+8. Given an age, figure out whether someone is a baby(1 months - 12 months), toddler (1
+year - 2 years), child(3 years - 12 years ), teenager(13 years - 17 years) or adult(18
+years and more ). Also check that age in months is between 1 and 12.
+
+function getAgeGroup(age, period) {
+    
+    switch(period) {
+        case 'month':
+        case 'months':
+            if(age >= 1 && age <= 12) return 'baby';
+            throw 'Invalid age';
+        case 'year':    
+        case 'years':
+            if(age >= 1 && age <= 2) return 'toddler';
+            if(age >= 3 && age <= 12) return 'child';
+            if(age >= 13 && age <= 12) return 'teenager';
+            if(age >= 18) return 'adult';
+            throw 'Invalid age';
+    }
+}
+
+9. Given three numbers. Sort them by the ascending order.
+
+function sortNumbers(x, y, z){
+    let points = [x, y, z]
+
+    let sorting = points.sort(function(a,b){return a-b});
+    return sorting;
+}
