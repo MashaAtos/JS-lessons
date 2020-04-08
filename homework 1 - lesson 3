@@ -119,3 +119,51 @@ function sortNumbers(x, y, z){
     let sorting = points.sort(function(a,b){return a-b});
     return sorting;
 }
+
+10. Percentage marks obtained by a student in three exams are to be entered to a
+computer. An indication of Pass or Fail is given out after the three marks are entered.
+The criteria for passing are as follows:
+a. A student passes if all three examinations are passed.
+b. Additionally a student may pass if only one subject is failed but the overall
+average is greater than or equal to 50.
+The pass mark for an individual subject is 40.
+
+function passExam(a, b, c){
+   let passMark = 40;
+   let avg = (a + b + c) / 3;
+
+    if(a >= 40 && b >= 40 && c >= 40){
+        return "Passed"
+    }
+    
+    else if(((a && b) >= passMark && (avg >= 50)) || ((a && c) >= passMark && (avg >= 50)) || ((b && c) >= passMark && (avg >= 50))){
+        return "Passed"
+    }
+
+    else {
+        return "Not Passed"
+    }
+ 
+}
+
+
+15. Enter a number. Reverse its first and last digits. Print the new number.
+
+function reverseNum(num) {
+  let rev = num
+        .toString()
+        .split('')
+        .reverse()
+        .join('')
+   return rev;           
+}
+
+18. (***) Enter a number. Find the difference between its biggest and smallest digits.
+
+function getDifference(number) {
+  let digits = number.toString().split('').map(n => +n)
+  let max = Math.max(...digits);  
+  let min = Math.min(...digits);
+  let dif = max - min;
+  return dif;
+}
