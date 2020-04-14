@@ -54,3 +54,17 @@ function fibonacci(num) {
     console.log(rem);
   }
 };
+
+9. Given three numbers a, b (a ≤ b) and num. Create an array of evenly spaced numbers by the given num length over the specified interval (from a to b). 
+
+function getInterval(a, b, num) {
+  let length = b - a;
+  let step = length / (num - 1);
+  let arr = [];
+  let last = a;
+  do {
+    arr.push(last.toFixed(1));
+    last += step;
+  } while(arr.length < num);
+  return arr;
+}
