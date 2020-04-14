@@ -68,3 +68,14 @@ function getInterval(a, b, num) {
   } while(arr.length < num);
   return arr;
 }
+
+10. Given an array of numbers. Find the index of the second maximum element.
+
+function getSecondMax(arr){ 
+let max = Math.max(...arr)
+let string = max.toString()
+let rem = arr.pop();
+let secMax = Math.max(...arr)
+  return arr.indexOf(secMax);
+
+}
