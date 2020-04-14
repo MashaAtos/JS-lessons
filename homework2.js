@@ -15,3 +15,26 @@ function fibonacci(num) {
 
   return fibonacci(num - 1) + fibonacci(num - 2);
 }
+
+4. Insert a number. Calculate product and sum of the digits of the number. If product is divisible by the sum, print the quotient, otherwise print the remainder.
+
+ function getRem(number) {
+  let sum = 0;
+  let product = 1;
+  while (number !== 0) {
+    let digit = number % 10;
+    sum += digit;
+    product *= digit;
+    number = Math.floor(number / 10);
+  }
+  if (sum === 0) {
+    console.log("Cannot calculate");
+    return;
+  }
+  let rem = product % sum;
+  if (rem === 0) {
+    console.log(product / sum);
+  } else {
+    console.log(rem);
+  }
+};
