@@ -16,6 +16,22 @@ function fibonacci(num) {
   return fibonacci(num - 1) + fibonacci(num - 2);
 }
 
+3. Given a number n( n> 0 ). Print Fibonacci series up to n.
+
+ function fibonacci_series(n) 
+{
+  if (n===1) 
+  {
+    return [0, 1];
+  } 
+  else 
+  {
+    var ser = fibonacci_series(n - 1);
+    ser.push(ser[ser.length - 1] + s[s.length - 2]);
+    return ser;
+  }
+};
+
 4. Insert a number. Calculate product and sum of the digits of the number. If product is divisible by the sum, print the quotient, otherwise print the remainder.
 
  function getRem(number) {
