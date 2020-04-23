@@ -26,24 +26,40 @@ function getMinimum(arr) {
   return getPositiveMinimum(shiftedValue, calledValue);
 }
 
+3. Write a recursive function which receives a number as arguments and returns the
+fibonacci sequence as array.
+
+function fib(n) {
+  if(n == 0) return [];
+  if(n <= 2) {
+    let arr = fib(n - 1);
+    arr.push(1);
+    return arr;
+  }
+  
+  let arr = fib(n - 1);
+  arr.push(arr[arr.length - 1] + arr[arr.length - 2]);
+  return arr;
+}
+
 4. Given an array of nested arrays. Write a recursive function that flattens it. (Hint create
 function that concats arrays).
 
-function flatten(arr) {
+function flattenArray(arr) {
+  let flatArray = [];
 
-  var temp = [];
-
-  function recursiveFlatten(arr) { 
-    for(var i = 0; i < arr.length; i++) {
-      if(Array.isArray(arr[i])) {
-        recursiveFlatten(arr[i]);
+  function unboxArray(arr) {
+    for (let i = 0; i < arr.length; i++) {
+      if (!Array.isArray(arr[i])) {
+        flatArray.push(arr[i]);
       } else {
-        temp.push(arr[i]);
+        unboxArray(arr[i]);
       }
     }
   }
-  recursiveFlatten(arr);
-  return temp;
+  
+  unboxArray(arr);
+  return flatArray;
 }
 
 5. Given a number. Write a function that calculates its sum of the digits and if that sum
