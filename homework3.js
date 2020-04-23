@@ -25,3 +25,23 @@ function getMinimum(arr) {
   let calledValue = getMinimum(arr);
   return getPositiveMinimum(shiftedValue, calledValue);
 }
+
+4. Given an array of nested arrays. Write a recursive function that flattens it. (Hint create
+function that concats arrays).
+
+function flatten(arr) {
+
+  var temp = [];
+
+  function recursiveFlatten(arr) { 
+    for(var i = 0; i < arr.length; i++) {
+      if(Array.isArray(arr[i])) {
+        recursiveFlatten(arr[i]);
+      } else {
+        temp.push(arr[i]);
+      }
+    }
+  }
+  recursiveFlatten(arr);
+  return temp;
+}
