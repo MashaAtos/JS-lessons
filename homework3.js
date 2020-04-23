@@ -45,3 +45,11 @@ function flatten(arr) {
   recursiveFlatten(arr);
   return temp;
 }
+
+5. Given a number. Write a function that calculates its sum of the digits and if that sum
+has more than 1 digit find the sum of digits of that number. Repeat that process if needed and
+return the result.
+
+function getSum(num) {
+    return (num - 1) % 9 + 1;
+}
