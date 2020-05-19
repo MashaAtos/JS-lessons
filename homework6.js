@@ -4,9 +4,13 @@
   return new Set(arr).size !== arr.length ? "Duplicated elements in list" : "Unique";
 }
 
-2. Given an array of numbers. Find the sum of numbers’ quadratic which are even.
+2. Given an array of numbers. Find the sum of numbers’ quadratic which are even.let arr = [1,2,3,4,5,6];
+let sqr = arr.map(function(value){
+  return Math.pow(value,2);
+})
 
-
+let sum = sqr.filter(i => i % 2 == 0).reduce((a,b) => a += b);
+console.log(sum)
 
 3. Check whether string is palindrome, or not.
 
