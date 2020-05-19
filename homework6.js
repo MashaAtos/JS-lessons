@@ -14,3 +14,5 @@ function isPalindrome(text) {
   let lower = text.toLowerCase();
     return lower == lower.split("").reverse().join("") ? `${lower} is palindrome` : `${lower} is not palindorme`;
 }
+
+4. Given a word and a list of possible anagrams, select the correct sublist.
