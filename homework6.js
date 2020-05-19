@@ -20,3 +20,16 @@ function isPalindrome(text) {
 }
 
 4. Given a word and a list of possible anagrams, select the correct sublist.
+
+function anagrams(word, array){
+ let addMatchingWords = [];
+ let splitWordAlph = word.split('').sort().join('');
+    for(let i of array){
+      let arrAlph = i.split('').sort().join('');
+      if(splitWordAlph == arrAlph)
+        addMatchingWords.push(i)
+    }
+  return addMatchingWords;
+}
+
+anagrams("pencil", ["licnep", "circular", "pupil", "nilcpe", "leppnec"])
